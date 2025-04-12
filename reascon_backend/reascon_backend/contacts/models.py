@@ -23,12 +23,10 @@ class Contact(models.Model):
         return f"{self.name} - {self.contact_type}"
 
 class ProjectInquiry(models.Model):
-    print(request.POST)
-    project_id = models.CharField(max_length=50)  # Or use ForeignKey if you have Projects model
     name = models.CharField(max_length=100)
-    email = models.CharField(max_length=100)
     phone = models.CharField(max_length=20, blank=True, null=True)
-    message = models.TextField()
+    email = models.CharField(max_length=100, blank=True, null=True)
+    message = models.TextField(blank=True, null=True)
     submitted_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

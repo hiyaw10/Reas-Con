@@ -8,8 +8,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Place favicon.png in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     
 
@@ -187,34 +187,29 @@
                         <div class="htc__contact__form__wrap">
                             <h2 class="title__line--5">SEND US A MESSAGE</h2>
                             <div class="contact-form-wrap">
-                                <form id="contact-form" method="post">
-                                    <div class="single-contact-inner">
-                                        <div class="single-contact-form">
-                                            <div class="contact-box name">
-                                                <span>Your Name*</span>
-                                                <input type="text" name="name" id="name" required>
-                                            </div>
-                                            <div class="contact-box email">
-                                                <span>Your Email*</span>
-                                                <input type="email" name="email" id="email" required>
-                                            </div>
-                                            <div class="contact-box subject">
-                                                <span>Subject*</span>
-                                                <input type="text" name="subject" id="subject" required>
-                                            </div>
+                                <form id="contact-form" action="http://127.0.0.1:8000/api/project-inquiry/" method="post">
+                                    <div class="clint__comment__form">
+                                        <div class="single__cl__form">
+                                            <input name="name" type="text" placeholder="Name">
+                                            <input name="email" type="email" placeholder="Email">
                                         </div>
-                                        <div class="single-contact-form">
-                                            <div class="contact-box message">
-                                                <span>Message*</span>
-                                                <textarea name="message" id="message" required></textarea>
-                                            </div>
-                                            <div class="contact-btn">
-                                                <button type="submit" class="htc__btn btn--theme">SEND NOW</button>
-                                            </div>
+                                        <div class="single__cl__form">
+                                            <input name="telephone" type="tel" placeholder="Phone">
+                                            <input name="subject" type="text" placeholder="Subject">
+                                        </div>
+                                        <div class="single__cl__message">
+                                            <textarea name="message" placeholder="Message"></textarea>
+                                        </div>
+                                        <div class="clint__submit__btn">
+                                            <button class="submit htc__btn" type="submit">
+                                                SEND MESSAGE 
+                                            </button>
                                         </div>
                                     </div>
-                                    <div id="form-messages" class="mt-3"></div>
+                            
                                 </form>
+                                <p class="form-messege"></p>
+
                             </div>                          
                         </div>
                     </div>

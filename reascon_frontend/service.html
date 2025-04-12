@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Place favicon.png in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     
 
@@ -353,22 +353,29 @@
                                 <h2 class="title__line">REQUEST A <span class="text--theme">QUOTE</span></h2>
                                 <p>Looking to bring your next construction project to life? Our expert team is here to guide you from concept to completion — efficiently, affordably, and professionally. Fill out the form below and we’ll get back to you shortly.</p>
                             </div>
-                            <div class="clint__comment__form">
-                                <div class="single__cl__form">
-                                    <input type="text" placeholder="Name">
-                                    <input type="email" placeholder="Email">
+                            <form id="contact-form" action="http://127.0.0.1:8000/api/project-inquiry/" method="post">
+                                <div class="clint__comment__form">
+                                    <div class="single__cl__form">
+                                        <input name="name" type="text" placeholder="Name">
+                                        <input name="email" type="email" placeholder="Email">
+                                    </div>
+                                    <div class="single__cl__form">
+                                        <input name="telephone" type="tel" placeholder="Phone">
+                                        <input name="subject" type="text" placeholder="Subject">
+                                    </div>
+                                    <div class="single__cl__message">
+                                        <textarea name="message" placeholder="Message"></textarea>
+                                    </div>
+                                    <div class="clint__submit__btn">
+                                        <button class="submit htc__btn" type="submit">
+                                            SEND MESSAGE 
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="single__cl__form">
-                                    <input type="tel" placeholder="Phone">
-                                    <input type="text" placeholder="Subject">
-                                </div>
-                                <div class="single__cl__message">
-                                    <textarea name="message" placeholder="Message"></textarea>
-                                </div>
-                                <div class="clint__submit__btn">
-                                    <a class="htc__btn" href="#">SEND MESSAGE</a>
-                                </div>
-                            </div>
+                        
+                            </form>
+                            <p class="form-messege"></p>
+
                         </div>
                     </div>
                 </div>

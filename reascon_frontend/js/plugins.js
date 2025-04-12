@@ -518,8 +518,22 @@ $(function() {
       $(formMessages).removeClass('error');
       $(formMessages).addClass('success');
 
+
+      // Set the text of the submit button to "sent".
+      $('.submit').text('✔ Sent').css('background-color', 'green');
+      setTimeout(function() {
+        $('.submit').text('Submit').css({
+            'background-color': '',
+            'border': 'none',
+            'color': 'white'
+        });
+      }, 3000);
+
       // Set the message text.
-      $(formMessages).text(response);
+      $(formMessages).text("Thank you for your inquiry!").show();
+      setTimeout(function() {
+        $(formMessages).fadeOut();
+      }, 3000);
 
       // Clear the form.
       $('#contact-form input,#contact-form textarea').val('');
@@ -528,13 +542,26 @@ $(function() {
       // Make sure that the formMessages div has the 'error' class.
       $(formMessages).removeClass('success');
       $(formMessages).addClass('error');
-
+    
+      // Set the text of the submit button to "Failed" with a red theme.
+      $('.submit').text('✘ Failed').css('background-color', 'red');
+      setTimeout(function() {
+        $('.submit').text('Submit').css({
+            'background-color': '',
+            'border': 'none',
+            'color': 'white'
+        });
+      }, 3000);
+    
       // Set the message text.
       if (data.responseText !== '') {
-        $(formMessages).text(data.responseText);
+        $(formMessages).text(data.responseText).show();
       } else {
-        $(formMessages).text('Oops! An error occured and your message could not be sent.');
+        $(formMessages).text('Oops! An error occurred and your message could not be sent.').show();
       }
+      setTimeout(function() {
+        $(formMessages).fadeOut();
+      }, 3000);
     });
   });
 

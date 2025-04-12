@@ -10,5 +10,5 @@ class ContactAdmin(admin.ModelAdmin):
 
 @admin.register(ProjectInquiry)
 class ProjectInquiryAdmin(admin.ModelAdmin):
-    list_display = ('project_id', 'name', 'email', 'submitted_at')
-    search_fields = ('project_id', 'name', 'email', 'message')
+    list_display = ( 'name', 'email', 'submitted_at')
+    search_fields = ( 'name', 'email', 'message')
